@@ -401,11 +401,11 @@
                         </Button.Background>
                     </Button>
                     <Button x:Name="placeHoldButton" Content="Place Hold" HorizontalAlignment="Left" Height="35" Margin="72,202,0,0" VerticalAlignment="Top" Width="152" Grid.ColumnSpan="3" Grid.Row="1" FontSize="20" Click="placeHoldButton_Click"/>
-                    <ComboBox x:Name="availabilityDropDown" HorizontalAlignment="Left" Margin="36,117,0,0" VerticalAlignment="Top" Width="234" IsEditable="False" Focusable="False" IsReadOnly="True" Text="More Copies/Availablity" Grid.ColumnSpan="3" FontSize="18" Grid.Row="1">
-                        <ComboBoxItem x:Name="Nosehill" Content="Nosehill              4/5"/>
-                        <ComboBoxItem x:Name="Central" Content="Central                3/5"/>
-                        <ComboBoxItem x:Name="ForestLawn" Content="Forest Lawn        2/5"/>
-                        <ComboBoxItem x:Name="LouiseRiley" Content="Louise Riley        0/5"/>
+                    <ComboBox x:Name="availabilityDropDown" HorizontalAlignment="Left" Margin="36,117,0,0" VerticalAlignment="Top" Width="234" IsEditable="True" Focusable="False" IsReadOnly="True" Text="More Copies/Availablity" Grid.ColumnSpan="3" FontSize="18" Grid.Row="1">
+                        <ComboBoxItem x:Name="Nosehill" IsEnabled = "False" Content="Nosehill              4/5"/>
+                        <ComboBoxItem x:Name="Central" IsEnabled = "False" Content="Central                3/5"/>
+                        <ComboBoxItem x:Name="ForestLawn" IsEnabled = "False" Content="Forest Lawn        2/5"/>
+                        <ComboBoxItem x:Name="LouiseRiley" IsEnabled = "False" Content="Louise Riley        0/5"/>
                     </ComboBox>
                     <Image x:Name="ItemImage" HorizontalAlignment="Left" Height="315" Margin="39,15,0,0" VerticalAlignment="Top" Width="215" Source="horror5.jpg" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
                     <TextBlock x:Name="ItemName" HorizontalAlignment="Left" Height="28" Margin="137,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Grid.Column="1" Grid.ColumnSpan="2" FontSize="20"><Run FontWeight="Bold" Text="Item name"/><Run Text=": The Haunted Mask"/></TextBlock>
