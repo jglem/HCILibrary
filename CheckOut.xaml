@@ -1,0 +1,56 @@
+﻿<Page x:Class="WpfApp1.CheckOut"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="CheckOut">
+
+    <Grid Name="checkoutGrid" Background="White">
+        <StackPanel x:Name="StackPanel1" HorizontalAlignment="Left" Height="970" Margin="50,41,0,0" VerticalAlignment="Top" Width="868">
+            <StackPanel.Background>
+                <ImageBrush x:Name="scannerimage" ImageSource="scanner.png"/>
+            </StackPanel.Background>
+        </StackPanel>
+        <TextBlock HorizontalAlignment="Left" Height="260" Margin="1080,77,0,0" TextWrapping="Wrap" Text="Welcome to Self-Checkout!" FontSize="90" VerticalAlignment="Top" Width="630" FontFamily="Sitka Subheading" TextAlignment="Center"/>
+        <Button x:Name="exitButton" Content="EXIT" HorizontalAlignment="Left" Margin="1156,825,0,0" VerticalAlignment="Top" Width="476" Height="124" FontSize="50" FontFamily="Sitka Subheading" Click="exitButton_Click" Background="#FF36A5AF" BorderBrush="#FFFF0909"/>
+        <TextBlock x:Name="msgBlock" Height="482" Margin="1157,306,280,0" TextWrapping="Wrap" Text="Please start scanning                    or                    Press EXIT to continue browsing" Width="475" FontSize="60                    " HorizontalAlignment="Center" VerticalAlignment="Top" TextAlignment="Center" FontFamily="Sitka Subheading"/>
+        <Button x:Name="button_Scan" Content="Scan item" HorizontalAlignment="Left" Margin="50,1011,0,0" VerticalAlignment="Top" Width="75" Click="button_Scan_Click"/>
+        <Popup Name ="checkout_popup" IsOpen="False" StaysOpen="True" Placement="Center" >
+            <Border Height="308" Width="380" BorderBrush="Black">
+                <Border.Background>
+                    <SolidColorBrush Color="#FF38A5B0"/>
+                </Border.Background>
+                <Grid Margin="10,0,0,10">
+
+                    <Button Name="Yes" Margin="50,219,266,43" Click="Yes_Click">
+                        <Label Width="30">
+                            YES
+                        </Label>
+                    </Button>
+                    <Label Margin="0,22,10,126" RenderTransformOrigin="0.491,0.453">
+                        <TextBlock FontSize="30" FontFamily="Skrita" Width="350" TextAlignment="Center"> 
+                            <LineBreak/>
+                            Are you sure you want to <LineBreak/> 
+                            finish checking out?<LineBreak/>
+
+                        </TextBlock>
+
+                    </Label>
+                    <Button Name="No" Margin="153,219,53,43" Click="No_Click">
+                        <Label>
+                            NO, RETURN TO CHECKOUT
+                        </Label>
+                    </Button>
+                    <CheckBox Margin="50,160,200,116" Content="Print Receipt?">
+
+                    </CheckBox>
+                </Grid>
+
+            </Border>
+        </Popup>
+        <Image Name="bg" Source="gray.png" Margin="-307,-107,-308,0" Opacity="0.7" Visibility="Hidden"/>
+    </Grid>
+</Page>

@@ -1,0 +1,505 @@
+﻿<Page x:Class="WpfApp1.Browse"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="Browse">
+    <Page.Resources>
+        <Style x:Key="MyButton" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.8" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid RenderTransformOrigin="0.504,0.523" Name="BrowsePage" Background="White">
+        <ScrollViewer CanContentScroll="False" VerticalScrollBarVisibility="Visible" Margin="52,81,90,0">
+            <Grid Height="2818" Width="1775">
+                <Label x:Name="horrorLabel" Content ="Mystery &amp; Thrillers" HorizontalAlignment="Left" Height="42" Margin="659,108,0,0" VerticalAlignment="Top" Width="280" RenderTransformOrigin="0.5,0.5" FontSize="30" FontFamily="Sitka Subheading">
+                </Label>
+                <Button x:Name="horrorViewAll" Content="View All" HorizontalAlignment="Left" Height="35" Margin="1531,126,0,0" VerticalAlignment="Top" Width="79" FontSize="16" FontFamily="Sitka Subheading"/>
+                <Button x:Name="horrorLeftTri" HorizontalAlignment="Left" Height="58" Margin="549,215,0,0" VerticalAlignment="Top" Width="72" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="left triangle.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="horrorRightTri" HorizontalAlignment="Left" Height="58" Margin="1637,215,0,0" VerticalAlignment="Top" Width="76" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="right triangle.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="horrorBook1" HorizontalAlignment="Left" Margin="660,165,0,0" VerticalAlignment="Top" Width="182" Height="189" Click="button_Click" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="horror5.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="horrorBook2" HorizontalAlignment="Left" Margin="855,165,0,0" VerticalAlignment="Top" Width="176" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="horror1.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="horrorBook3" HorizontalAlignment="Left" Margin="1050,165,0,0" VerticalAlignment="Top" Width="180" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="horror2.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="horrorBook4" HorizontalAlignment="Left" Margin="1242,165,0,0" VerticalAlignment="Top" Width="181" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="horror3.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="horrorBook5" HorizontalAlignment="Left" Margin="1437,165,0,0" VerticalAlignment="Top" Width="180" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="horror4.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+
+
+                <Label x:Name="fantasyLabel" Content="Fantasy &amp; Science Fiction" HorizontalAlignment="Left" Height="42" Margin="659,392,0,0" VerticalAlignment="Top" Width="352" RenderTransformOrigin="0.5,0.5" FontSize="30" FontFamily="Sitka Subheading">
+                </Label>
+                <Button x:Name="fantasyViewAll" Content="View All" HorizontalAlignment="Left" Height="35" Margin="1531,411,0,0" VerticalAlignment="Top" Width="79" FontSize="16" FontFamily="Sitka Subheading"/>
+                <Button x:Name="fantasyLeftTri" HorizontalAlignment="Left" Height="58" Margin="549,515,0,0" VerticalAlignment="Top" Width="72" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="left triangle.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="fantasyRightTri" HorizontalAlignment="Left" Height="58" Margin="1637,515,0,0" VerticalAlignment="Top" Width="76" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="right triangle.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="fantasyBook1" HorizontalAlignment="Left" Margin="660,450,0,0" VerticalAlignment="Top" Width="182" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="fantasy1.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="fantasyBook2" HorizontalAlignment="Left" Margin="855,450,0,0" VerticalAlignment="Top" Width="176" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="fantasy2.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="fantasyBook3" HorizontalAlignment="Left" Margin="1050,450,0,0" VerticalAlignment="Top" Width="180" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="fantasy3.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="fantasyBook4" HorizontalAlignment="Left" Margin="1242,450,0,0" VerticalAlignment="Top" Width="181" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="fantasy4.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="fantasyBook5" HorizontalAlignment="Left" Margin="1437,450,0,0" VerticalAlignment="Top" Width="180" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="fantasy5.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+
+                <Label x:Name="romanceLabel" Content ="Romance" HorizontalAlignment="Left" Height="42" Margin="659,678,0,0" VerticalAlignment="Top" Width="136" RenderTransformOrigin="0.5,0.5" FontSize="30" FontFamily="Sitka Subheading">
+
+                </Label>
+                <Button x:Name="romanceViewAll" Content="View All" HorizontalAlignment="Left" Height="35" Margin="1531,696,0,0" VerticalAlignment="Top" Width="79" FontSize="16" FontFamily="Sitka Subheading"/>
+                <Button x:Name="romanceLeftTri" HorizontalAlignment="Left" Height="58" Margin="547,805,0,0" VerticalAlignment="Top" Width="72" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="left triangle.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="romanceRightTri" HorizontalAlignment="Left" Height="58" Margin="1637,805,0,0" VerticalAlignment="Top" Width="76" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="right triangle.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="romanceBook1" HorizontalAlignment="Left" Margin="660,735,0,0" VerticalAlignment="Top" Width="182" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="romance1.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="romanceBook2" HorizontalAlignment="Left" Margin="855,735,0,0" VerticalAlignment="Top" Width="176" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="romance2.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="romanceBook3" HorizontalAlignment="Left" Margin="1050,735,0,0" VerticalAlignment="Top" Width="180" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="romance3.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="romanceBook4" HorizontalAlignment="Left" Margin="1242,735,0,0" VerticalAlignment="Top" Width="181" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="romance4.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="romanceBook5" HorizontalAlignment="Left" Margin="1437,735,0,0" VerticalAlignment="Top" Width="180" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="romance5.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+
+
+                <Label x:Name="travelLabel" Content ="Travel" HorizontalAlignment="Left" Height="42" Margin="659,972,0,0" VerticalAlignment="Top" Width="112" RenderTransformOrigin="0.5,0.5" FontSize="30" FontFamily="Sitka Subheading">
+                </Label>
+                <Button x:Name="travelViewAll" Content="View All" HorizontalAlignment="Left" Height="35" Margin="1531,990,0,0" VerticalAlignment="Top" Width="79" FontSize="16" FontFamily="Sitka Subheading"/>
+                <Button x:Name="travelLeftTri" HorizontalAlignment="Left" Height="58" Margin="549,1099,0,-108" VerticalAlignment="Top" Width="72" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="left triangle.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="travelRightTri" HorizontalAlignment="Left" Height="58" Margin="1637,1099,0,-108" VerticalAlignment="Top" Width="76" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="right triangle.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="travelBook1" HorizontalAlignment="Left" Margin="660,1029,0,-169" VerticalAlignment="Top" Width="182" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="travel1.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="travelBook2" HorizontalAlignment="Left" Margin="855,1029,0,-169" VerticalAlignment="Top" Width="176" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="travel2.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="travelBook3" HorizontalAlignment="Left" Margin="1050,1029,0,-169" VerticalAlignment="Top" Width="180" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="travel3.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="travelBook4" HorizontalAlignment="Left" Margin="1242,1029,0,-169" VerticalAlignment="Top" Width="181" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="travel4.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="travelBook5" HorizontalAlignment="Left" Margin="1437,1029,0,-169" VerticalAlignment="Top" Width="180" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="travel5.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Label x:Name="businessLabel" Content ="Business &amp; Careers" HorizontalAlignment="Left" Height="42" Margin="659,1274,0,0" VerticalAlignment="Top" Width="280" RenderTransformOrigin="0.5,0.5" FontSize="30" FontFamily="Sitka Subheading">
+                </Label>
+                <Button x:Name="businessViewAll" Content="View All" HorizontalAlignment="Left" Height="35" Margin="1531,1292,0,0" VerticalAlignment="Top" Width="79" FontSize="16" FontFamily="Sitka Subheading"/>
+                <Button x:Name="businessLeftTri" HorizontalAlignment="Left" Height="58" Margin="549,1401,0,-23" VerticalAlignment="Top" Width="72" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="left triangle.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="businessRightTri" HorizontalAlignment="Left" Height="58" Margin="1637,1401,0,-23" VerticalAlignment="Top" Width="76" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="right triangle.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="businessBook1" HorizontalAlignment="Left" Margin="660,1331,0,-84" VerticalAlignment="Top" Width="182" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="business1.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="businessBook2" HorizontalAlignment="Left" Margin="855,1331,0,-84" VerticalAlignment="Top" Width="176" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="business2.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="businessBook3" HorizontalAlignment="Left" Margin="1050,1331,0,-84" VerticalAlignment="Top" Width="180" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="business3.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="businessBook4" HorizontalAlignment="Left" Margin="1242,1331,0,-84" VerticalAlignment="Top" Width="181" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="business4.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="businessBook5" HorizontalAlignment="Left" Margin="1437,1331,0,-84" VerticalAlignment="Top" Width="180" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="business5.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Label x:Name="humanitiesLabel" Content="Humanities" HorizontalAlignment="Left" Height="42" Margin="659,1579,0,-185" VerticalAlignment="Top" Width="272" RenderTransformOrigin="0.5,0.5" FontSize="30" FontFamily="Sitka Subheading">
+                </Label>
+                <Button x:Name="humanitiesViewAll" Content="View All" HorizontalAlignment="Left" Height="35" Margin="1531,1598,0,-197" VerticalAlignment="Top" Width="79" FontSize="16" FontFamily="Sitka Subheading"/>
+                <Button x:Name="humanitiesLeftTri" HorizontalAlignment="Left" Height="58" Margin="549,1707,0,-329" VerticalAlignment="Top" Width="72" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="left triangle.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="humanitiesRightTri" HorizontalAlignment="Left" Height="58" Margin="1637,1707,0,-329" VerticalAlignment="Top" Width="76" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="right triangle.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="humanitiesBook1" HorizontalAlignment="Left" Margin="660,1637,0,-390" VerticalAlignment="Top" Width="182" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="humanities1.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="humanitiesBook2" HorizontalAlignment="Left" Margin="855,1637,0,-390" VerticalAlignment="Top" Width="176" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="humanities2.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="humanitiesBook3" HorizontalAlignment="Left" Margin="1050,1637,0,-390" VerticalAlignment="Top" Width="180" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="humanities3.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="humanitiesBook4" HorizontalAlignment="Left" Margin="1242,1637,0,-390" VerticalAlignment="Top" Width="181" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="humanities4.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="humanitiesBook5" HorizontalAlignment="Left" Margin="1437,1637,0,-390" VerticalAlignment="Top" Width="180" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="humanities5.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Label x:Name="comicBooksLabel" Content="Comic Books" HorizontalAlignment="Left" Height="42" Margin="659,1887,0,-493" VerticalAlignment="Top" Width="292" RenderTransformOrigin="0.5,0.5" FontSize="30" FontFamily="Sitka Subheading">
+                </Label>
+                <Button x:Name="comicbooksViewAll" Content="View All" HorizontalAlignment="Left" Height="35" Margin="1531,1906,0,-505" VerticalAlignment="Top" Width="79" FontSize="16" FontFamily="Sitka Subheading"/>
+                <Button x:Name="comicBooksLeftTri" HorizontalAlignment="Left" Height="58" Margin="549,2015,0,-637" VerticalAlignment="Top" Width="72" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="left triangle.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="comicBooksRightTri" HorizontalAlignment="Left" Height="58" Margin="1637,2015,0,-637" VerticalAlignment="Top" Width="76" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="right triangle.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="comicBook1" HorizontalAlignment="Left" Margin="660,1945,0,-698" VerticalAlignment="Top" Width="182" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="comic1.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="comicBook2" HorizontalAlignment="Left" Margin="855,1945,0,-698" VerticalAlignment="Top" Width="176" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="comic2.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="comicBook3" HorizontalAlignment="Left" Margin="1050,1945,0,-698" VerticalAlignment="Top" Width="180" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="comic3.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="comicBook4" HorizontalAlignment="Left" Margin="1242,1945,0,-698" VerticalAlignment="Top" Width="181" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="comic4.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="comicBook5" HorizontalAlignment="Left" Margin="1437,1945,0,-698" VerticalAlignment="Top" Width="180" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="comic5.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Label x:Name="scienceLabel" Content ="Science" HorizontalAlignment="Left" Height="42" Margin="659,2178,0,-784" VerticalAlignment="Top" Width="112" RenderTransformOrigin="0.5,0.5" FontSize="30" FontFamily="Sitka Subheading">
+                </Label>
+                <Button x:Name="scienceViewAll" Content="View All" HorizontalAlignment="Left" Height="35" Margin="1531,2196,0,-795" VerticalAlignment="Top" Width="79" FontSize="16" FontFamily="Sitka Subheading"/>
+                <Button x:Name="scienceLeftTri" HorizontalAlignment="Left" Height="58" Margin="549,2305,0,-927" VerticalAlignment="Top" Width="72" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="left triangle.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="scienceRightTri" HorizontalAlignment="Left" Height="58" Margin="1637,2305,0,-927" VerticalAlignment="Top" Width="76" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="right triangle.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="scienceBook1" HorizontalAlignment="Left" Margin="660,2235,0,-988" VerticalAlignment="Top" Width="182" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="science1.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="scienceBook2" HorizontalAlignment="Left" Margin="855,2235,0,-988" VerticalAlignment="Top" Width="176" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="science2.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="scienceBook3" HorizontalAlignment="Left" Margin="1050,2235,0,-988" VerticalAlignment="Top" Width="180" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="science3.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="scienceBook4" HorizontalAlignment="Left" Margin="1242,2235,0,-988" VerticalAlignment="Top" Width="181" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="science4.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="scienceBook5" HorizontalAlignment="Left" Margin="1437,2235,0,-988" VerticalAlignment="Top" Width="180" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="science5.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Label x:Name="selfHelpLabel" Content ="Self-Help" HorizontalAlignment="Left" Height="42" Margin="659,2476,0,0" VerticalAlignment="Top" Width="136" RenderTransformOrigin="0.5,0.5" FontSize="30" FontFamily="Sitka Subheading">
+                </Label>
+                <Button x:Name="selfHelpViewAll" Content="View All" HorizontalAlignment="Left" Height="35" Margin="1531,2494,0,-1093" VerticalAlignment="Top" Width="79" FontSize="16" FontFamily="Sitka Subheading"/>
+                <Button x:Name="selfHelpLeftTri" HorizontalAlignment="Left" Height="58" Margin="549,2603,0,-1225" VerticalAlignment="Top" Width="72" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="left triangle.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="selfHelpRightTri" HorizontalAlignment="Left" Height="58" Margin="1637,2603,0,-1225" VerticalAlignment="Top" Width="76" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="right triangle.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="selfHelpBook1" HorizontalAlignment="Left" Margin="660,2533,0,-1286" VerticalAlignment="Top" Width="182" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="selfHelp1.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="selfHelpBook2" HorizontalAlignment="Left" Margin="855,2533,0,-1286" VerticalAlignment="Top" Width="176" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="selfHelp2.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="selfHelpBook3" HorizontalAlignment="Left" Margin="1050,2533,0,-1286" VerticalAlignment="Top" Width="180" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="selfHelp3.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="selfHelpBook4" HorizontalAlignment="Left" Margin="1242,2533,0,-1286" VerticalAlignment="Top" Width="181" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="selfHelp4.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="selfHelpBook5" HorizontalAlignment="Left" Margin="1437,2533,0,-1286" VerticalAlignment="Top" Width="180" Height="189" Style="{StaticResource MyButton}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="selfHelp5.jpg" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+
+            </Grid>
+        </ScrollViewer>
+
+        <Popup x:Name ="InfoPopUp" IsOpen="False" StaysOpen="False" Placement="Center" VerticalAlignment="Center" HorizontalAlignment="Center" >
+            <Border Background="White" Height="576" Width="821" BorderBrush="Black" BorderThickness="3,3,3,3">
+                <Grid Margin="0,0,2,1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="47*"/>
+                        <RowDefinition Height="36*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="38*"/>
+                        <ColumnDefinition Width="0*"/>
+                        <ColumnDefinition Width="167*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="exitInfoPopUpButton" HorizontalAlignment="Left" Margin="605,10,0,0" VerticalAlignment="Top" Width="39" Height="39" Click="exitInfoPopUpButton_Click" Grid.Column="1" Grid.ColumnSpan="2" BorderBrush="White"  Style="{StaticResource MyButton}">
+                        <Button.Background>
+                            <ImageBrush ImageSource="exit.png"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="placeHoldButton" Content="Place Hold" HorizontalAlignment="Left" Height="35" Margin="72,202,0,0" VerticalAlignment="Top" Width="152" Grid.ColumnSpan="3" Grid.Row="1" FontSize="20" Click="placeHoldButton_Click"/>
+                    <ComboBox x:Name="availabilityDropDown" HorizontalAlignment="Left" Margin="36,117,0,0" VerticalAlignment="Top" Width="234" IsEditable="False" Focusable="False" IsReadOnly="True" Text="More Copies/Availablity" Grid.ColumnSpan="3" FontSize="18" Grid.Row="1">
+                        <ComboBoxItem x:Name="Nosehill" Content="Nosehill              4/5"/>
+                        <ComboBoxItem x:Name="Central" Content="Central                3/5"/>
+                        <ComboBoxItem x:Name="ForestLawn" Content="Forest Lawn        2/5"/>
+                        <ComboBoxItem x:Name="LouiseRiley" Content="Louise Riley        0/5"/>
+                    </ComboBox>
+                    <Image x:Name="ItemImage" HorizontalAlignment="Left" Height="315" Margin="39,15,0,0" VerticalAlignment="Top" Width="215" Source="horror5.jpg" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+                    <TextBlock x:Name="ItemName" HorizontalAlignment="Left" Height="28" Margin="137,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Grid.Column="1" Grid.ColumnSpan="2" FontSize="20"><Run FontWeight="Bold" Text="Item name"/><Run Text=": The Haunted Mask"/></TextBlock>
+                    <TextBlock x:Name="AuthorLabel" HorizontalAlignment="Left" Height="29" Margin="137,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" Grid.Column="1" Grid.ColumnSpan="2" FontSize="20"><Run FontWeight="Bold" Text="Author: "/><Run Text="R.L. Stine"/></TextBlock>
+                    <TextBlock x:Name="CallLabel" HorizontalAlignment="Left" Height="26" Margin="137,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" Grid.Column="1" Grid.ColumnSpan="2" FontSize="20"><Run FontWeight="Bold" Text="Call No.: "/><Run Text="HR39402830"/></TextBlock>
+                    <TextBlock x:Name="GenreLabel" HorizontalAlignment="Left" Height="47" Margin="137,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" Grid.Column="1" Grid.ColumnSpan="2" FontSize="20"><Run FontWeight="Bold" Text="Genre: "/><Run Text="Mystery/Thriller"/></TextBlock>
+                    <TextBlock x:Name="SynopsisBlock" HorizontalAlignment="Left" Height="318" Margin="137,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="493" Grid.Column="1" Grid.ColumnSpan="2" FontSize="20" Grid.RowSpan="2"><Run FontWeight="Bold" Text="Synopsis: "/><LineBreak/><Run Text="Face to Face with a Nightmare..."/><LineBreak/><Run/><LineBreak/><Run Text="How ugly is Carly Beth's Halloween mask? It's so ugly that it almost scared her little brother to death. So terrifying that even her friends are totally freaked out by it. It's the best Halloween mask ever. It's everything Carly Beth hoped it would be. And more. Maybe too much more. Because Halloween is almost over. And Carly Beth is still wearing that special mask..."/></TextBlock>
+                    <TextBlock x:Name="LocationLabel" HorizontalAlignment="Left" Height="29" Margin="40,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" FontSize="18" Grid.Row="1" TextDecorations="Underline"><Run Text="Location"/></TextBlock>
+                    <TextBlock x:Name="AvailableLabel" HorizontalAlignment="Left" Height="27" Margin="141,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" RenderTransformOrigin="0.416,0.033" FontSize="18" Grid.Row="1" Grid.ColumnSpan="3"><Run Text="Available copies" TextDecorations="Underline"/></TextBlock>
+                    <TextBlock x:Name="Location1Label" HorizontalAlignment="Left" Height="21" Margin="40,62,0,0" TextWrapping="Wrap" Text="Nosehill" VerticalAlignment="Top" Width="66" Grid.Row="1" FontSize="18"/>
+                    <TextBlock x:Name="Location2Label" HorizontalAlignment="Left" Height="25" Margin="40,87,0,0" TextWrapping="Wrap" Text="Central" VerticalAlignment="Top" Width="57" Grid.Row="1" FontSize="18"/>
+                    <TextBlock x:Name="Location1Available" HorizontalAlignment="Left" Height="25" Margin="26,60,0,0" TextWrapping="Wrap" Text="4/5" VerticalAlignment="Top" Width="57" Grid.Row="1" FontSize="18" Grid.Column="2"/>
+                    <TextBlock x:Name="Location2Available" HorizontalAlignment="Left" Height="25" Margin="25,87,0,0" TextWrapping="Wrap" Text="3/5" VerticalAlignment="Top" Width="57" Grid.Row="1" FontSize="18" Grid.Column="2"/>
+                    <TextBlock x:Name="HoldsLabel" HorizontalAlignment="Left" Height="28" Margin="40,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Grid.ColumnSpan="3" FontSize="18" Grid.Row="1" Text="Number of placed holds: 10"/>
+                    <Button x:Name="printInfoButton" Content="Print Info" HorizontalAlignment="Left" Height="35" Margin="477,202,0,0" VerticalAlignment="Top" Width="152" Grid.Row="1" FontSize="20" Grid.Column="2" Click="printInfoButton_Click"/>
+                    <Image x:Name="bg" Source="gray.jpg" Margin="-87,-146,-104,-133" Opacity="0.7" Grid.ColumnSpan="3" Grid.RowSpan="2" Visibility="Hidden"/>
+                </Grid>
+            </Border>
+        </Popup>
+        <Popup x:Name = "PrintInfoPopUp" IsOpen="False" StaysOpen="False" Placement="Center">
+            <Border Background="White" Height="340" Width="533" BorderBrush="Black" BorderThickness="3,3,3,3">
+                <Grid Background="White" Margin="0,0,2,2">
+                    <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="20,19,0,0" TextWrapping="Wrap" Text="Please select which information to print." VerticalAlignment="Top" Height="37" Width="427" FontSize="22"/>
+                    <CheckBox x:Name="titleCheckBox" Content="Title/Author/Call No./Genre" HorizontalAlignment="Left" Margin="60,80,0,0" VerticalAlignment="Top" FontSize="20" Height="31" Unchecked="titleCheckBox_Unchecked" Checked="titleCheckBox_Checked"/>
+                    <CheckBox x:Name="synopsisCheckBox" Content="Synopsis" HorizontalAlignment="Left" Margin="60,124,0,0" VerticalAlignment="Top" FontSize="20" Width="120" Unchecked="synopsisCheckBox_Unchecked" Checked="synopsisCheckBox_Checked"/>
+                    <CheckBox x:Name="copyAvailabilityCheckBox" Content="Copy Availability Info" HorizontalAlignment="Left" Margin="60,165,0,0" VerticalAlignment="Top" FontSize="20" Width="235" Unchecked="copyAvailabilityCheckBox_Unchecked" Checked="copyAvailabilityCheckBox_Checked"/>
+                    <CheckBox x:Name="itemImageCheckBox" Content="Item Image" HorizontalAlignment="Left" Margin="60,207,0,0" VerticalAlignment="Top" FontSize="20" Width="144" Unchecked="itemImageCheckBox_Unchecked" Checked="itemImageCheckBox_Checked"/>
+                    <CheckBox x:Name="allCheckBox" Content="All of the above" HorizontalAlignment="Left" Margin="60,247,0,0" VerticalAlignment="Top" FontSize="20" Checked="allCheckBox_Checked" Unchecked="allCheckBox_Unchecked"/>
+                    <Button x:Name="printNowbutton" Content="Print Now" HorizontalAlignment="Left" Margin="418,290,0,0" VerticalAlignment="Top" Width="93" FontSize="16" Click="printNowbutton_Click"/>
+                    <Button x:Name="exitPrintInfoButton" HorizontalAlignment="Left" Height="39" Margin="484,3,-3,0" VerticalAlignment="Top" Width="39" BorderBrush="White" Click="exitPrintInfoButton_Click" Style="{StaticResource MyButton}">
+                        <Button.Background>
+                            <ImageBrush Stretch="Uniform" ImageSource="exit.png"/>
+                        </Button.Background>
+                    </Button>
+
+                </Grid>
+            </Border>
+        </Popup>
+        <Popup x:Name ="change_location_popup" IsOpen="False" StaysOpen="False" Placement="Center">
+            <Border Background="#FF38A5B0" Height="308" Width="512">
+                <Grid Margin="10,0,0,10" RenderTransformOrigin="0.534,0.53">
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Please choose a pick-up location." VerticalAlignment="Top" Margin="36,48,0,0" Height="99" Width="371" FontFamily="Sitka Subheading" FontSize="36"/>
+                    <ComboBox x:Name="searchDropdownLocation" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="58" Margin="36,166,0,0" VerticalAlignment="Top" Width="426" Text="All" FontSize="24" SelectedIndex="0">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black" Offset="0"/>
+                                <GradientStop Color="White" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                        <ComboBoxItem x:Name="Library1" Content="Library 1"/>
+                        <ComboBoxItem x:Name="Library2" Content="Library 2"/>
+                        <ComboBoxItem x:Name="Library3" Content="Library 3"/>
+                        <ComboBoxItem x:Name="Library4" Content="Library 4"/>
+                    </ComboBox>
+                    <Button x:Name="exitButtonLocation" HorizontalAlignment="Left" Margin="453,10,0,0" VerticalAlignment="Top" Width="39" Height="39" BorderBrush="{x:Null}" Click="exitButtonLocation_Click" Style="{StaticResource MyButton}">
+                        <Button.Background>
+                            <ImageBrush ImageSource="exit.png" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Content="Confirm" HorizontalAlignment="Left" VerticalAlignment="Top" Width="97" Margin="197,253,0,0" Height="35" FontFamily="Sitka Subheading" FontSize="22" RenderTransformOrigin="-5.938,-4.057" Click="Button_Click_1"/>
+                </Grid>
+            </Border>
+        </Popup>
+
+
+        <Label x:Name="label" Content="Browse Books" HorizontalAlignment="Left" Margin="58,119,0,0" VerticalAlignment="Top" Height="80" Width="322" FontFamily="Sitka Subheading" FontSize="48"/>
+        <Button x:Name="MysteryButton" HorizontalAlignment="Left" Margin="80,347,0,0" VerticalAlignment="Top" Width="204" FontSize="24" FontFamily="Sitka Subheading" Click="MysteryButton_Click" Height="44" Style="{StaticResource MyButton}">
+            <TextBlock Width="204"><Underline><Run Text="Mystery &amp; Thrillers"/></Underline></TextBlock>
+        </Button>
+        <Button x:Name="FantasyButton" HorizontalAlignment="Left" Margin="80,391,0,0" VerticalAlignment="Top" Width="268" FontSize="24" FontFamily="Sitka Subheading" Height="44" Style="{StaticResource MyButton}">
+            <TextBlock Width="272"><Underline><Run Text="Fantasy &amp; Science Fiction"/></Underline></TextBlock>
+        </Button>
+        <Button x:Name="RomanceButton" HorizontalAlignment="Left" Margin="74,431,0,0" VerticalAlignment="Top" Width="104" FontSize="24" FontFamily="Sitka Subheading" Height="44" Style="{StaticResource MyButton}">
+            <TextBlock Width="94" Height="34"><Underline><Run Text="Romance"/></Underline></TextBlock>
+        </Button>
+        <Button x:Name="TravelButton" HorizontalAlignment="Left" Margin="76,471,0,0" VerticalAlignment="Top" Width="72" FontSize="24" FontFamily="Sitka Subheading" Height="44" Style="{StaticResource MyButton}">
+            <TextBlock Width="66" Height="34"><Underline><Run Text="Travel"/></Underline></TextBlock>
+        </Button>
+        <Button x:Name="BusinessButton" HorizontalAlignment="Left" Margin="78,509,0,0" VerticalAlignment="Top" Width="204" FontSize="24" FontFamily="Sitka Subheading" Height="44" Style="{StaticResource MyButton}">
+            <TextBlock Width="200"><Run Text="Business &amp; Careers" TextDecorations="Underline"/></TextBlock>
+        </Button>
+        <Button x:Name="HumanitiesButton" HorizontalAlignment="Left" Margin="78,551,0,0" VerticalAlignment="Top" Width="126" FontSize="24" FontFamily="Sitka Subheading" Height="44" Style="{StaticResource MyButton}">
+            <TextBlock Width="124"><Run Text="Humanities" TextDecorations="Underline"/></TextBlock>
+        </Button>
+        <Button x:Name="ComicBooks" HorizontalAlignment="Left" Margin="78,591,0,0" VerticalAlignment="Top" Width="144" FontSize="24" FontFamily="Sitka Subheading" Height="44" Style="{StaticResource MyButton}">
+            <TextBlock Width="144"><Run Text="Comic Books" TextDecorations="Underline"/></TextBlock>
+        </Button>
+        <Button x:Name="ScienceButton" HorizontalAlignment="Left" Margin="78,631,0,0" VerticalAlignment="Top" Width="80" FontSize="24" FontFamily="Sitka Subheading" Height="44" Style="{StaticResource MyButton}">
+            <TextBlock Width="80"><Run Text="Science" TextDecorations="Underline"/></TextBlock>
+        </Button>
+        <Button x:Name="SelfHelpButton" HorizontalAlignment="Left" Margin="76,671,0,0" VerticalAlignment="Top" Width="100" FontSize="24" FontFamily="Sitka Subheading" Height="44" Style="{StaticResource MyButton}">
+            <TextBlock Width="98"><Run Text="Self-Help" TextDecorations="Underline"/></TextBlock>
+        </Button>
+        <Image x:Name="graybg" Source="gray.jpg" Margin="-60,-62,-59,-45" Opacity="0.7" Grid.ColumnSpan="3" Grid.RowSpan="2" Visibility="Hidden"/>
+
+    </Grid>
+</Page>
